@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        NSLog(@"UIUserInterfaceIdiomPad");
+        self.isIPad = true;
+    }else{
+        NSLog(@"!!not UIUserInterfaceIdiomPad");
+        self.isIPad = false;
+    }
     return YES;
 }
 
