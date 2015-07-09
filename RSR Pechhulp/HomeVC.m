@@ -11,6 +11,7 @@
 @interface HomeVC ()
 @property (weak, nonatomic) IBOutlet UIView *vwBtnMap;
 @property (weak, nonatomic) IBOutlet UIView *vwBtnAbout;
+@property (weak, nonatomic) IBOutlet UIView *vwInfoIcon;
 @property (weak, nonatomic) IBOutlet UIButton *btnInfo;
 @end
 
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-         self.btnInfo.hidden = true;
+         self.vwInfoIcon.hidden = true;
      } else {
          self.vwBtnAbout.hidden = true;
      }
