@@ -24,6 +24,6 @@
 //    IBOutlet UIActivityIndicatorView * activityIndicator;
     IBOutlet MKMapView *worldView;
 }
--(void)findLocation;
+//-(void)findLocation;
 -(void)foundLocation:(CLLocation *)loc;
 @end

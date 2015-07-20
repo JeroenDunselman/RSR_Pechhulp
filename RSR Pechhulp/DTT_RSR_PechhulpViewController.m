@@ -7,12 +7,15 @@
 //
 
 #import "DTT_RSR_PechhulpViewController.h"
-#import "RSRMapPoint.h"
+#import "DTT_RSR_MapPoint.h"
+#import "Reachability.h"
+#import <SystemConfiguration/SystemConfiguration.h>
 
 @interface DTT_RSR_PechhulpViewController ()
 - (IBAction)callNowBtn_iPhone:(UIButton *)sender;
 - (IBAction)callNowBtn:(UIButton *)sender;
 - (IBAction)cancelCallBtn:(UIButton *)sender;
+- (BOOL)connected;
 @property (weak, nonatomic) IBOutlet UIImageView *vwMarker;
 @property (weak, nonatomic) IBOutlet UIView *vwContactInfoRSR;
 @property (weak, nonatomic) IBOutlet UIView *vwCallBtn;
@@ -36,24 +39,38 @@
     self.vwContactInfoRSR.hidden = true;
     self.vwPopup_iPhone.hidden = true;
     self.vwCallBtn.hidden = true;
-  
-    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-        if (!locationManager.locationServicesEnabled){
+    
+    if (![self connected]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Niet verbonden met internet"
+                                                        message:@"Activeer via Instellingen."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    if (!locationManager.locationServicesEnabled){
         //1.3. Wanneer de GPS van het mobiele device is uitgeschakeld,
         //wordt de gebruiker gevraagd om de GPS van het mobiele device te activeren.
-        //1.7 of de app geen toegang heeft tot de GPS van het apparaat, zal de app een pop-up weergeven.
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GPS niet ingeschakeld"
-                                                            message:@"Activeer GPS via Instellingen."
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
-        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GPS niet ingeschakeld"
+                                                        message:@"Activeer GPS via Instellingen."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
+    [locationManager startUpdatingLocation];
+}
+
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return networkStatus != NotReachable;
 }
 
 - (IBAction)callNowBtn_iPhone:(UIButton *)sender {
-    NSString *phoneNumber = [@"tel://" stringByAppendingString:@"09007788990"];
+#warning todo activate
+//    NSString *phoneNumber = [@"tel://" stringByAppendingString:@"09007788990"];
     //   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
     self.vwPopup_iPhone.hidden = true;
 }
@@ -89,10 +106,11 @@
 - (void)initLocaMgr {
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
+     //1.7 [als] de app geen toegang heeft tot de GPS van het apparaat, zal de app een pop-up weergeven.
     [locationManager requestWhenInUseAuthorization];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDistanceFilter:10.0f];
-    [locationManager startUpdatingLocation];
+//    [locationManager startUpdatingLocation];
     [worldView setDelegate:self];
 }
 
@@ -121,7 +139,7 @@
 -(void)foundLocation:(CLLocation *)loc{
     [self reverseGeocode:loc];
     CLLocationCoordinate2D coord = [loc coordinate];
-    RSRMapPoint *mp = [[RSRMapPoint alloc] InitWithCoordinate:coord
+    DTT_RSR_MapPoint *mp = [[DTT_RSR_MapPoint alloc] InitWithCoordinate:coord
                                                         title:[self.textLocationDescription text]];
     [worldView removeAnnotations:worldView.annotations];
     [worldView addAnnotation:mp];

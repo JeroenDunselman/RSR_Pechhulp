@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Jeroen Dunselman. All rights reserved.
 //
 
-#import "RSRMapPoint.h"
+#import "DTT_RSR_MapPoint.h"
 
-@implementation RSRMapPoint
+@implementation DTT_RSR_MapPoint
 @synthesize coordinate, title;
 -(id)InitWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t
 {

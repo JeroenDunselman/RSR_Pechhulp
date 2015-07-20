@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A92405751B5D328100A91532 /* DTT_RSR_InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A92405741B5D328100A91532 /* DTT_RSR_InfoVC.m */; };
+		A92405771B5D4F0800A91532 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92405761B5D4F0800A91532 /* SystemConfiguration.framework */; };
+		A924057A1B5D4FD900A91532 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A92405791B5D4FD900A91532 /* Reachability.m */; };
 		A9EE63181B4A48A500E3FDEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE63171B4A48A500E3FDEA /* main.m */; };
 		A9EE631B1B4A48A500E3FDEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE631A1B4A48A500E3FDEA /* AppDelegate.m */; };
-		A9EE631E1B4A48A500E3FDEA /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE631D1B4A48A500E3FDEA /* HomeVC.m */; };
+		A9EE631E1B4A48A500E3FDEA /* DTT_RSR_HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE631D1B4A48A500E3FDEA /* DTT_RSR_HomeVC.m */; };
 		A9EE63211B4A48A500E3FDEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EE631F1B4A48A500E3FDEA /* Main.storyboard */; };
 		A9EE63231B4A48A500E3FDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9EE63221B4A48A500E3FDEA /* Images.xcassets */; };
 		A9EE63261B4A48A500E3FDEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EE63241B4A48A500E3FDEA /* LaunchScreen.xib */; };
 		A9EE63321B4A48A600E3FDEA /* RSR_PechhulpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE63311B4A48A600E3FDEA /* RSR_PechhulpTests.m */; };
 		A9EE633D1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE633C1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.m */; };
-		A9EE63401B4A53E800E3FDEA /* RSRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE633F1B4A53E800E3FDEA /* RSRMapPoint.m */; };
+		A9EE63401B4A53E800E3FDEA /* DTT_RSR_MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EE633F1B4A53E800E3FDEA /* DTT_RSR_MapPoint.m */; };
 		A9EE63421B4A5D5900E3FDEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EE63411B4A5D5900E3FDEA /* MapKit.framework */; };
 		A9EE63441B4A5D7800E3FDEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EE63431B4A5D7800E3FDEA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -31,13 +34,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A92405731B5D328100A91532 /* DTT_RSR_InfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTT_RSR_InfoVC.h; sourceTree = "<group>"; };
+		A92405741B5D328100A91532 /* DTT_RSR_InfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTT_RSR_InfoVC.m; sourceTree = "<group>"; };
+		A92405761B5D4F0800A91532 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A92405781B5D4FD900A91532 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A92405791B5D4FD900A91532 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A9EE63121B4A48A500E3FDEA /* RSR Pechhulp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSR Pechhulp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EE63161B4A48A500E3FDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9EE63171B4A48A500E3FDEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9EE63191B4A48A500E3FDEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9EE631A1B4A48A500E3FDEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A9EE631C1B4A48A500E3FDEA /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		A9EE631D1B4A48A500E3FDEA /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		A9EE631C1B4A48A500E3FDEA /* DTT_RSR_HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTT_RSR_HomeVC.h; sourceTree = "<group>"; };
+		A9EE631D1B4A48A500E3FDEA /* DTT_RSR_HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTT_RSR_HomeVC.m; sourceTree = "<group>"; };
 		A9EE63201B4A48A500E3FDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9EE63221B4A48A500E3FDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9EE63251B4A48A500E3FDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,8 +54,8 @@
 		A9EE63311B4A48A600E3FDEA /* RSR_PechhulpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSR_PechhulpTests.m; sourceTree = "<group>"; };
 		A9EE633B1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTT_RSR_PechhulpViewController.h; sourceTree = "<group>"; };
 		A9EE633C1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTT_RSR_PechhulpViewController.m; sourceTree = "<group>"; };
-		A9EE633E1B4A53E800E3FDEA /* RSRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSRMapPoint.h; sourceTree = "<group>"; };
-		A9EE633F1B4A53E800E3FDEA /* RSRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSRMapPoint.m; sourceTree = "<group>"; };
+		A9EE633E1B4A53E800E3FDEA /* DTT_RSR_MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTT_RSR_MapPoint.h; sourceTree = "<group>"; };
+		A9EE633F1B4A53E800E3FDEA /* DTT_RSR_MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTT_RSR_MapPoint.m; sourceTree = "<group>"; };
 		A9EE63411B4A5D5900E3FDEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9EE63431B4A5D7800E3FDEA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92405771B5D4F0800A91532 /* SystemConfiguration.framework in Frameworks */,
 				A9EE63441B4A5D7800E3FDEA /* CoreLocation.framework in Frameworks */,
 				A9EE63421B4A5D5900E3FDEA /* MapKit.framework in Frameworks */,
 			);
@@ -88,6 +97,7 @@
 				A9EE632E1B4A48A600E3FDEA /* RSR PechhulpTests */,
 				A9EE63131B4A48A500E3FDEA /* Products */,
 				A9C6FDEA1B4E7A0B009EE06C /* frameworks */,
+				A92405761B5D4F0800A91532 /* SystemConfiguration.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +113,16 @@
 		A9EE63141B4A48A500E3FDEA /* RSR Pechhulp */ = {
 			isa = PBXGroup;
 			children = (
+				A92405781B5D4FD900A91532 /* Reachability.h */,
+				A92405791B5D4FD900A91532 /* Reachability.m */,
 				A9EE63191B4A48A500E3FDEA /* AppDelegate.h */,
 				A9EE631A1B4A48A500E3FDEA /* AppDelegate.m */,
-				A9EE631C1B4A48A500E3FDEA /* HomeVC.h */,
-				A9EE631D1B4A48A500E3FDEA /* HomeVC.m */,
-				A9EE633E1B4A53E800E3FDEA /* RSRMapPoint.h */,
-				A9EE633F1B4A53E800E3FDEA /* RSRMapPoint.m */,
+				A92405731B5D328100A91532 /* DTT_RSR_InfoVC.h */,
+				A92405741B5D328100A91532 /* DTT_RSR_InfoVC.m */,
+				A9EE631C1B4A48A500E3FDEA /* DTT_RSR_HomeVC.h */,
+				A9EE631D1B4A48A500E3FDEA /* DTT_RSR_HomeVC.m */,
+				A9EE633E1B4A53E800E3FDEA /* DTT_RSR_MapPoint.h */,
+				A9EE633F1B4A53E800E3FDEA /* DTT_RSR_MapPoint.m */,
 				A9EE631F1B4A48A500E3FDEA /* Main.storyboard */,
 				A9EE633B1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.h */,
 				A9EE633C1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.m */,
@@ -245,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EE63401B4A53E800E3FDEA /* RSRMapPoint.m in Sources */,
+				A92405751B5D328100A91532 /* DTT_RSR_InfoVC.m in Sources */,
+				A9EE63401B4A53E800E3FDEA /* DTT_RSR_MapPoint.m in Sources */,
 				A9EE633D1B4A4C6100E3FDEA /* DTT_RSR_PechhulpViewController.m in Sources */,
-				A9EE631E1B4A48A500E3FDEA /* HomeVC.m in Sources */,
+				A924057A1B5D4FD900A91532 /* Reachability.m in Sources */,
+				A9EE631E1B4A48A500E3FDEA /* DTT_RSR_HomeVC.m in Sources */,
 				A9EE631B1B4A48A500E3FDEA /* AppDelegate.m in Sources */,
 				A9EE63181B4A48A500E3FDEA /* main.m in Sources */,
 			);

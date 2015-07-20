@@ -10,7 +10,7 @@
 #import "CoreLocation/CoreLocation.h"
 #import "MapKit/MapKit.h"
 
-@interface RSRMapPoint : NSObject <MKAnnotation>
+@interface DTT_RSR_MapPoint : NSObject <MKAnnotation>
 {}
 -(id)InitWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
